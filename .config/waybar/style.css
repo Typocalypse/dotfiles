@@ -1,0 +1,307 @@
+@import 'colors-waybar.css';
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: FontAwesome, monospace;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+}
+
+#workspaces {
+	background-color: @background;
+	margin: 5px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+#workspaces button {
+    padding: 5px 10px 5px 5px;
+    color: @color7;
+}
+
+#workspaces button.focused {
+    color: @background;
+    background-color: #7aa2f7;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+	background-color: @color7;
+	color: @background;
+	border-radius: 5px;
+}
+
+#workspaces button.active {
+  background-color: @background;
+  color: @color8;
+  border-radius: 5px;
+}
+
+#gamemode, #custom-chatgpt, #custom-date, #custom-updates, #custom-pacman, #custom-weather, #cpu, #memory, #temperature, #clock, #battery, #network, #tray, #language , #custom-bars, #custom-tile, #pulseaudio, #pulseaudio-slider, #custom-quit, #custom-lock, #custom-reboot, #idle_inhibitor {
+	background-color: @background;
+	padding: 5px 10px;
+	margin: 5px 0px;
+}
+
+#custom-date {
+	color: @color12;
+  border-radius: 5px 5px 5px 5px;
+  margin-right: 10px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 30%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient_f {
+	0% {
+		background-position: 0% 200%;
+	}
+    50% {
+        background-position: 200% 0%;
+    }
+	100% {
+		background-position: 400% 200%;
+	}
+}
+
+@keyframes gradient_f_nh {
+	0% {
+		background-position: 0% 200%;
+	}
+	100% {
+		background-position: 200% 200%;
+	}
+}
+
+#window {
+  border-radius: 5px;
+  color: @foreground;
+  background-color: @background;
+}
+
+#waybar {
+    background: @background;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    color: @foreground;
+}
+
+
+window#waybar.empty,
+window#waybar.empty .modules-left,
+window#waybar.empty .modules-center,
+window#waybar.empty .modules-right {
+  background: none;
+  border: none;
+}
+
+window#waybar.floating,
+window#waybar.floating .modules-left,
+window#waybar.floating .modules-center,
+window#waybar.floating .modules-right {
+  background: none;
+  border: none;
+}
+
+#custom-power {
+	color: @background;
+	background-color: @color2;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 5px 10px;
+}
+
+#custom-button {
+	color: @background;
+	background-color: @color5;
+	border-radius: 5px 5px 5px 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	padding: 5px 12px 5px 8px;
+}
+
+#clock {
+    color: @color13;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+}
+
+#battery {
+    color: #9ece6a;
+}
+
+#battery.charging {
+    color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f7768e;
+    color: @background;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#network {
+	color: @color6;
+	border-radius: 5px 0px 0px 5px;
+}
+
+#pulseaudio {
+	color: @color8;
+  border-radius: 0px 5px 5px 0px;
+  margin-right: 10px;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: black;
+}
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+    background-color: green;
+}
+
+#pulseaudio.microphone {
+    color: @color5;
+    border-radius: 0px 5px 5px 0px;
+    /* margin-right: 10px; */
+}
+
+#custom-updates {
+    color: @color7;
+}
+
+#custom-pacman {
+    color: @color4;
+}
+
+#language {
+    /* background: @color7; */
+    color: @color7;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+    /* padding: 5px 10px; */
+
+}
+
+#custom-weather {
+    color: @color5;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+}
+
+#cpu {
+    color: @color2;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#memory {
+    color: @color3;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#temperature {
+    color: @color4;
+    border-radius: 0px 5px 5px 0px;
+    margin-right: 10px;
+}
+
+#tray {
+    border-radius: 0px 5px 5px 0px;
+    margin-right: 10px;
+}
+#custom-chatgpt {
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 8px;
+    margin-right: 10px;
+}
+#gamemode {
+  color: @color8;
+  border-radius: 5px 5px 5px 5px;
+  margin-right: 10px;
+}
+#custom-seperator {
+    color: @color1;
+}
+#mpd {
+    border-radius: 5px 5px 5px 5px;
+    color: @background;
+    /* background: linear-gradient(52deg, @color7 0%, @color2 19%, @color3 43%, @color4 56%, @coloe5 80%, @color6 100%); */
+    background: radial-gradient(circle, @color14 0%, @color15 6%, @color3 14%, @color4 14%, @color5 18%, @color6 28%, @color6 28%, @color7 58%, @color8 69%, @color9 69%, @color10 72%, @color11 73%, @color12 78%, @color13 100%); 
+    background-size: 600% 600%;
+    animation: gradient_f 9s cubic-bezier(.72, .39, .21, 1) infinite;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    margin-right: 10px;
+}
+#mpd.stopped {
+    border-radius: 5px 5px 5px 5px;
+    color: @background;
+    background: @color2;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    margin-right: 10px;
+}
+#mpd.paused {
+    border-radius: 5px 5px 5px 5px;
+    color: @background;
+    background: @color5;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    margin-right: 10px;
+}
+#mpd.disconnected {
+    border-radius: 5px 5px 5px 5px;
+    color: @foreground;
+    background: @background;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    margin-right: 10px;
+}
+#idle_inhibitor {
+    border-radius: 5px 0px 0px 5px;
+}
+#custom-bars {
+    margin-right: 10px;
+    border-radius: 0px 5px 5px 0px;
+}
+#custom-tile {
+    border-radius: 5px 0px 0px 5px;
+}
+#custom-reboot {
+    margin-right: 10px;
+}
+#custom-reboot {
+    color: @color2;
+}
+#custom-lock {
+    color: @color3;
+}
+#custom-quit {
+    color: @color4;
+}
